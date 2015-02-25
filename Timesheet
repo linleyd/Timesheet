@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Timesheet
+		</title>
+		<link href="timesheet_style_reformat.css" rel="stylesheet" />
+	</head>
+	<body style="width: 500px">
+	<div id="proj_items">
+		<div id="proj0" style="border: 1px solid black">
+			<h3 class="title">Project Title</h3>
+			<div class="content">
+				<div class="left">
+				<p><strong>Stopwatch</strong></p>
+				<p><span class="display_time"><span class="hour">hh</span>:<span class="min">mm</span>:<span class="sec">ss</span>
+				<button onclick="start()">Start</button>
+				<button onclick="stop()">Stop</button></p>
+				<p>Notes about current project:</p>
+				<textarea class="note_input"></textarea>
+			</div>
+			<div>
+			<table border = "1px">
+			<thead>
+				<tr><th colspan="3">Project History</th></tr>
+				<tr>
+					<th>Date</th>
+					<th>Time at Project</th>
+					<th>Notes</th>
+				</tr>
+			</thead>
+			<tbody class="proj_history">
+			</tbody>
+			</table>
+		</div>
+			</div>
+		</div>
+		</div>
+		<button onclick="removeProject()">Remove selected projects</button>
+		<button onclick="addProject()">Add project</button>
+		<input type="text" id="proj_name" value="Type Name of Project Here">
+	<script src="timesheet_script_reformat.js"> </script> 
+	</body>
+	</html>
